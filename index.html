@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free eBook Library</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f1ea;
+      color: #2c2c2c;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* makes footer stick at bottom */
+    }
+
+    header {
+      background: linear-gradient(135deg, #6b4226, #8c5c3d);
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      font-style: italic;
+    }
+
+    main {
+      flex: 1; /* takes full space between header & footer */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 1rem;
+    }
+
+    .categories {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .category {
+      display: block;
+      padding: 1.5rem 2rem;
+      min-width: 150px;
+      text-align: center;
+      background: #fff;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #6b4226;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .category:hover {
+      background: #f3e5d0;
+      transform: translateY(-6px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    /* Animated Books Section */
+    .book-animation {
+      display: flex;
+      gap: 20px;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .book {
+      width: 120px;
+      height: 160px;
+      background: linear-gradient(145deg, #d9b38c, #f4e1c1);
+      border: 2px solid #6b4226;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #6b4226;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .book:hover {
+      transform: scale(1.1) rotate(-3deg);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #6b4226;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📚 Free eBook Library</h1>
+    <p>Read & Download Books Online - All Categories</p>
+  </header>
+
+  <main>
+    <!-- Categories -->
+    <div class="categories">
+      <a href="category.html?cat=Horror" class="category">Horror</a>
+      <a href="category.html?cat=Sci-Fi" class="category">Sci-Fi</a>
+      <a href="category.html?cat=Action" class="category">Action</a>
+    </div>
+
+    <!-- Animated Books Section -->
+    <!-- Animated Books Section -->
+    <div class="book-animation">
+      <div class="book">
+        <img src="images/book1.jpg" alt="Book1">
+      </div>
+      <div class="book">
+        <img src="images/book2.jpg" alt="Book 2">
+      </div>
+      <div class="book">
+        <img src="images/book3.jpg" alt="Book 3">
+      </div>
+      <div class="book">
+        <img src="images/book4.jpg" alt="Book 4">
+      </div>
+      <div class="book">
+        <img src="images/book5.jpg" alt="Book 4">
+      </div>
+            <div class="book">
+        <img src="images/book6.jpg" alt="Book 4">
+      </div>
+            <div class="book">
+        <img src="images/book7.jpg" alt="Book 4">
+      </div>
+            <div class="book">
+        <img src="images/book8.jpg" alt="Book 4">
+      </div>
+            <div class="book">
+        <img src="images/book9.jpg" alt="Book 4">
+      </div>
+      
+    </div>
+
+    <style>
+      .book-animation {
+        display: flex;
+        gap: 25px;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .book {
+        width: 150px;
+        height: 220px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        cursor: pointer;
+        position: relative;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+
+      .book img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      /* Hover Animation */
+      .book:hover {
+        transform: scale(1.12) rotate(-3deg);
+        box-shadow: 0 15px 25px rgba(0,0,0,0.35);
+      }
+
+      .book:hover img {
+        transform: scale(1.2);
+      }
+
+      /* Colorful Glow Effect */
+      .book::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 12px;
+        padding: 3px;
+        background: linear-gradient(45deg, #ff6a00, #ee0979, #00c6ff, #00ff94);
+        background-size: 300% 300%;
+        animation: glow 6s linear infinite;
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, 
+                       linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+                mask-composite: exclude;
+      }
+
+      @keyframes glow {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+    </style>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Free eBook Library | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

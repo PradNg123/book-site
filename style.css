@@ -1,0 +1,125 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f4f9;
+  color: #333;
+}
+
+/* --- HEADER --- */
+header {
+  text-align: center;
+  background: #222;
+  color: white;
+  padding: 20px;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header a {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #f4f4f9;
+  color: #222;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+header a:hover {
+  background: #ff5733;
+  color: #fff;
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* --- CATEGORY GRID --- */
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+.category {
+  background: #444;
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+.category:hover {
+  background: #ff5733;
+}
+
+/* --- BOOK GRID --- */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  padding: 30px;
+  justify-items: center; /* center-align cards */
+}
+
+.book-card {
+  background: white;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 220px; /* let grid handle size, keep max width */
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* --- BOOK IMAGE --- */
+.book-card img {
+  width: 100%;
+  height: 344px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* --- BUTTONS --- */
+.btn {
+  display: inline-block;
+  margin: 5px;
+  padding: 8px 12px;
+  background: #222;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff5733;
+}
+
+/* --- FOOTER --- */
+footer {
+  text-align: center;
+  background: #222;
+  color: white;
+  padding: 15px;
+  margin-top: 20px;
+}

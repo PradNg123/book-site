@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="category-title">Category</h1>
+    <a href="index.html">⬅ Back to Home</a>
+  </header>
+
+  <main id="book-list" class="book-grid"></main>
+
+  <script src="books.js"></script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get("cat");
+    document.getElementById("category-title").textContent = category + " Books";
+
+    const bookList = document.getElementById("book-list");
+    const books = allBooks[category] || [];
+
+    books.forEach(book => {
+      bookList.innerHTML += `
+        <div class="book-card">
+          <img src="${book.cover}" alt="${book.title}">
+          <h3>${book.title}</h3>
+          <p>by ${book.author}</p>
+          <a href="${book.read}" target="_blank" class="btn">📖 Read Online</a>
+          <a href="${book.download}" target="_blank" class="btn">⬇ Download</a>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>
